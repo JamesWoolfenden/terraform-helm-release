@@ -34,7 +34,7 @@ helm delete statefulset.apps/rabbitmq
 kubectl get all
 kubectl delete statefulset.apps/rabbitmq-1579787249
 kubectl delete service/rabbitmq
-kubectl delete service/rabbitmq-1579787249-headless 
+kubectl delete service/rabbitmq-1579787249-headless
 
 kubectl version --short && \
 kubectl get componentstatus && \
@@ -66,7 +66,37 @@ helm repo update
 helm install bitnami/rabbitmq --generate-name
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| helm | n/a |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [helm_release](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| release | Helm chart and url details | `map(any)` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| release | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
