@@ -29,33 +29,6 @@ module "helm" {
 }
 ```
 
-``` helm
-helm delete statefulset.apps/rabbitmq
-kubectl get all
-kubectl delete statefulset.apps/rabbitmq-1579787249
-kubectl delete service/rabbitmq
-kubectl delete service/rabbitmq-1579787249-headless
-
-kubectl version --short && \
-kubectl get componentstatus && \
-kubectl get nodes && \
-kubectl cluster-info
-
-kubectl create namespace rabbitmq
-helm install my-rabbit stable/rabbitmq --namespace rabbitmq -f rabbit-values.yaml
-
-watch kubectl get deployments,pods,services --namespace rabbitmq
-
-helm repo add eks https://aws.github.io/eks-charts
-helm repo add bitami https://charts.bitnami.com/bitnami
-helm repo remove stable
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
-
-helm list
-helm search repo stable/rabbitmq
-helm repo update
-```
-
 ```cli
 helm repo add bitami https://charts.bitnami.com/bitnami
 
