@@ -92,7 +92,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-helm
 
 ## Copyrights
 
-Copyright © 2021 James Woolfenden
+Copyright 2021 James Woolfenden
 
 ## License
 
