@@ -47,29 +47,29 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| helm | n/a |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | n/a |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [helm_release](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) |
+| Name | Type |
+|------|------|
+| [helm_release.release](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| release | Helm chart and url details | `map(any)` | n/a | yes |
+| <a name="input_release"></a> [release](#input\_release) | Helm chart and url details | `map(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| release | n/a |
+| <a name="output_release"></a> [release](#output\_release) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
