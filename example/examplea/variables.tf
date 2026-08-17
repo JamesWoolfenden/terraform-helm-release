@@ -2,9 +2,9 @@ variable "release" {
   type        = map(any)
   description = "Helm chart and url details"
   default = {
-    name            = "rabbitmq"
-    url             = "https://charts.bitnami.com/bitnami"
-    repository_name = "bitami"
+    name            = "ingress-nginx"
+    url             = "https://kubernetes.github.io/ingress-nginx"
+    repository_name = "ingress-nginx"
   }
 
   validation {
