@@ -1,0 +1,20 @@
+---
+name: Verify
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+# holden:ignore:HLD_CI_017: By design
+  verify:
+    uses: JamesWoolfenden/.github/.github/workflows/terraform-verify.yml@main

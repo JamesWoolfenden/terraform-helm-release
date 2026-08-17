@@ -1,5 +1,5 @@
 output "release" {
   description = "The Helm release"
-  value       = module.helm
+  value       = helm_release.this
   sensitive   = true
 }

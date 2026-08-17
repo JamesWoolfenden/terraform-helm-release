@@ -6,4 +6,9 @@ variable "release" {
     url             = "https://charts.bitnami.com/bitnami"
     repository_name = "bitami"
   }
+
+  validation {
+    condition     = can(var.release.name) && can(var.release.url) && can(var.release.repository_name)
+    error_message = "The release map must contain 'name', 'url', and 'repository_name' keys."
+  }
 }

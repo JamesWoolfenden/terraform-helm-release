@@ -1,3 +1,4 @@
+# holden:ignore:HLD_TF_004
 terraform {
   required_providers {
     helm = {
@@ -5,5 +6,5 @@ terraform {
       version = "3.1.1"
     }
   }
-  required_version = ">=0.14.8"
+  required_version = ">=1.5.0"
 }

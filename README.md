@@ -6,8 +6,6 @@
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-helm-release/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-helm-release&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-helm-release/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-helm-release&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module - creates Aurpora cluster and instances
 
@@ -46,7 +44,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | n/a |
 
 ## Modules
@@ -56,20 +54,20 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
-| [helm_release.release](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
+| ---- | ---- |
+| [helm_release.this](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_release"></a> [release](#input\_release) | Helm chart and url details | `map(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
-| <a name="output_release"></a> [release](#output\_release) | n/a |
+| ---- | ----------- |
+| <a name="output_release"></a> [release](#output\_release) | The Helm release |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Role and Permissions
@@ -99,7 +97,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-helm
 
 ## Copyrights
 
-Copyright 2021 James Woolfenden
+Copyright 2021-26 James Woolfenden
 
 ## License
 
