@@ -56,6 +56,15 @@ repos:
         entry: holden scan .
         pass_filenames: false
         types: [terraform]
+        # pre-push, not pre-commit: a system hook resolves holden from $PATH,
+        # and no CI runner has it. CI invokes `pre-commit run --all-files`,
+        # whose default stage is pre-commit, so anything on that stage runs
+        # there and fails with "Executable `holden` not found". pre-push still
+        # gates every push from a machine that has holden installed, and is
+        # skipped by the CI invocation.
+        #
+        # Requires `pre-commit install --hook-type pre-push` once per clone.
+        stages: [pre-push]
   - repo: https://github.com/jameswoolfenden/pike
     rev: 274a37d353c80bd4e44a0a3b4f674d5d576e7c3a # v1.0.11
     hooks:
